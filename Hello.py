@@ -58,7 +58,7 @@ SBM['Month'] = SBM['Month'].map({
 })
 process = (SBM.set_index('Month').join(dfTarget.set_index('Month'))).reset_index()
 months = st.subheader('Hoàn thành tiến độ tháng')
-process['Hoàn thành'] = process['Thành tiền'] / process['Target'] * 100
+process['Hoàn thành'] = process['Thành tiền'] / process['Target'].astype('float64') * 100
 
 months = st.radio('Chọn tháng: ', process['Month'])
 st.table(process[process['Month'] == months])
