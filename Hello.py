@@ -13,21 +13,21 @@ st.sidebar.title('My dashboard')
 
 # Upload file
 
-upload = st.sidebar.file_uploader(label = 'Tải báo cáo 1.14 vào đây',type = ['xlsx', 'xls'])
+upload = st.sidebar.file_uploader(label = 'Tải báo cáo 1.14 vào đây',type = ['csv'])
 
 if upload is not None:
     filename = upload.name
     df = pd.read_csv(filename)
 else:
-    df = pd.read_csv('Vinasoy.xlsx')
+    df = pd.read_csv('Vinasoy.csv')
 
-uploadTarget = st.sidebar.file_uploader(label = 'Tải file chỉ tiêu vào đây',type = ['xlsx', 'xls'])
+uploadTarget = st.sidebar.file_uploader(label = 'Tải file chỉ tiêu vào đây',type = ['csv')
 
 if uploadTarget is not None:
     filename2 = uploadTarget.name
     dfTarget = pd.read_csv(filename2)
 else:
-    dfTarget = pd.read_csv('Target.xlsx')
+    dfTarget = pd.read_csv('Target.csb')
 
 # Choose start date and end date
 
