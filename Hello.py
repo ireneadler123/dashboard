@@ -27,7 +27,7 @@ if uploadTarget is not None:
     filename2 = uploadTarget.name
     dfTarget = pd.read_csv(filename2)
 else:
-    dfTarget = pd.read_csv('Target.csb')
+    dfTarget = pd.read_csv('Target.csv')
 
 # Choose start date and end date
 
