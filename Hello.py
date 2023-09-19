@@ -21,7 +21,7 @@ if upload is not None:
 else:
     df = pd.read_csv('Vinasoy.csv')
 
-uploadTarget = st.sidebar.file_uploader(label = 'Tải file chỉ tiêu vào đây',type = ['csv')
+uploadTarget = st.sidebar.file_uploader(label = 'Tải file chỉ tiêu vào đây',type = ['csv'])
 
 if uploadTarget is not None:
     filename2 = uploadTarget.name
