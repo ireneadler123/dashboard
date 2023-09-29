@@ -279,4 +279,3 @@ st.subheader('Tăng trưởng theo nhóm sản phẩm')
 barChart_growth = px.bar(flavors_growth, x = flavors_growth['Hương vị'], y = flavors_growth['Tăng trưởng (%)'])
 st.plotly_chart(barChart_growth, use_container_width = True, height = 200)
 
-import pathlib
